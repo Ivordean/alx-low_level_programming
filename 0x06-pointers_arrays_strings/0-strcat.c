@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _strcat - This is a funtion strcat 
+*_strcat - This is a funtion strcat 
 * @dest: first param
 * @src: second param
 * Return: pointer to resulting string
