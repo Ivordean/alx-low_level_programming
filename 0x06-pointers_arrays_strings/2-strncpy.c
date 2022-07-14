@@ -1,5 +1,5 @@
 #include "main.h"
-#inlcude <string.h.
+#include <string.h>
 
 /**
  * _strncpy -> for copying purpose
