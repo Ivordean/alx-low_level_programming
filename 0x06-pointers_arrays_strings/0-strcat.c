@@ -1,17 +1,24 @@
 #include "main.h"
 
 /**
-* _memset - Entry point
-* @s: pointed destination
-* @b: constant byte
-* @n: bytes
-* Return: Always 0 (Success)
+* _strcat -> this is a funtion strcat 
+* @dest: first param
+* @src: second param
+* Return: pointer to resulting string
 */
-char *_memset(char *s, char b, unsigned int n)
+char *_strcat(char *dest, char *src)
 {
-	unsigned int i;
+	int len = 0, i;
 
-	for (i = 0; i < n; i++)
-		s[i] = b;
-	return (s);
+	while (dest[len])
+		len++;
+
+	for (i = 0; src [i] != 0; i++)
+	{
+		dest[len] = src [i];
+		len += 1;
+	}
+	dest[len] = '\0';
+	return (dest);
 }
+
