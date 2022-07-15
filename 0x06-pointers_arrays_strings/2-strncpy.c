@@ -2,17 +2,22 @@
 #include <string.h>
 
 /**
- * _strchr - locates a character in a string
- * @s: string input
- * @c: character to find
- * Return: pointer to first occurence of c character
+ * _strncpy - C funtion that copies a string, including the
+ * terminating null  byte, using at most an inputted number of bytes
+ * @dest: buffer storing the string copy
+ * @src: the source string
+ * @n: max number of byte copied
+ * Return: return
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	unsigned int i;
+	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
-		if (s[i] == c)
-			break;
-	return (s[i] == c ? (s + i) : '\0');
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i]
+
+			for ( ; i < n; i++)
+				dest[i] = '\0';
+
+	return (dest);
 }
