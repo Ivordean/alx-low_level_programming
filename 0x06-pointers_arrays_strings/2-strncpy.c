@@ -1,15 +1,17 @@
 #include "main.h"
 
-
 /**
-* _strncpy -> for copying purpose
-* @dest: param1
-* @src: param2
-* @n: param3
-* Return: string
-*/
+ * strchr - locates a character in a string
+ * @s: string input
+ * @c: character to find
+ * Return: pointer to first occurence of c character
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
-	strncpy(dest, src n);
-	return (dest);
+	unsigned int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		if (s[i] == c)
+			break;
+	return (s[i] == c ? (s + i) : '\0');
 }
