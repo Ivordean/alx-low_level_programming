@@ -1,25 +1,22 @@
 #include "main.h"
 
 /**
- * _strpbrk - searches a string for any of a set of bytes
- * @s: string to check
- * @accept: string to check against
- * Return: pointer to byte in s that matches or null if no march
+ * reverse_array -> reversing an array
+ * @a: array a
+ * @n: an element of an array
  */
 void reverse_array(int *a, int n)
 {
-	unsigned int i, j;
+	int *p, i, aux, k;
 
-	for (i = 0; s[i]; i++)
+	p =a;
+	for (i = 0; i < n; i++)
+		p++;
+	for (k = 0; k < n / 2; k++)
 	{
-		for (j = 0; accept[j]; j++)
-		{
-			if (s[i] == accept[j])
-				break;
-		}
-		if (accept[j])
-			return (s + i);
+		aux = a[k];
+		a[k] = *p;
+		*p = aux;
+		p--;
 	}
-	return (0);
 }
-					
