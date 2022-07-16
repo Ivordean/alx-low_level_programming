@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * _strncat -> function to append some charx
 * @dest: the first string parameter
