@@ -7,12 +7,6 @@
 
 int main(void)
 {
-char acharacter;
-int aint;
-long along;
-long long alonglong;
-float afloat;
-
 printf("Size of a char: %lu byte(s)\n", sizeof(acharacter));
 printf("Size of an in: %lu byte(s)\n", sizeof(aint));
 printf("size of a long int: %lu byte(s)\n", sizeof(along));
