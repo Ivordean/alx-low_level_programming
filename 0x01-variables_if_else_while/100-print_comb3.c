@@ -1,37 +1,29 @@
 #include <stdio.h>
 /**
-* main - Entry point
-* Description: prints all possible different combinations of two digits
-* Return: Always return 0 (success)
+*main - Prints all combinations of two digits with,
+* and space followed by new line
+*
+*Return: returns 0
 */
-
 int main(void)
 {
-	int a = '0';
-	int b = '9';
+	int digit1, digit2;
 
-	while (a <= '9')
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-	while (b <= '9')
-	{
-	if (!(a > b || a == b))
-	{
-	putchar(a);
-	putchar(b);
-	if (a == '8' && b == '9')
-	{
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+		{
+
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
+
+			if (digit1 == 8 && digit2 == 9)
+				continue;
+
+			putchar(',');
+			putchar(' ');
+		}
+	}
 	putchar('\n');
-	}
-	else
-	{
-	putchar(',');
-	putchar(' ');
-	}
-	}
-	b++;
-	}
-	b = '0';
-	a++;
-	}
 	return (0);
 }
