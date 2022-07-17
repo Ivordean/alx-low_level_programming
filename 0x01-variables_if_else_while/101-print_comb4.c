@@ -1,31 +1,29 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
-*main - Entry point
+*main - Prints all combinations of three digits with,
+* and space followed by new line
 *
-* Return: always 0 (success)
+*Return: returns 0
 */
 int main(void)
 {
-	int i, j, k;
+	int digit1, digit2, digit3;
 
-	for (i = 48; i < 58; i++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		for (j = i; j < 58; k++)
+		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
 		{
-			for (k = j; k < 58; k++)
+			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
 			{
-				if (i == j || j == k || i == k)
-				{
+
+				putchar((digit1 % 10) + '0');
+				putchar((digit2 % 10) + '0');
+				putchar((digit3 % 10) + '0');
+
+				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
 					continue;
-				}
-				putchar(i);
-				putchar(j);
-				putchar(k);
-				if (i == 55 && j == 56 && k == 57)
-					break;
-			}
-			else
-			{putchar(',');
+
+				putchar(',');
 				putchar(' ');
 			}
 		}
