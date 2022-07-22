@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+HEAD
 My readme.md file for hello world task
 =======
 # alx-low_level_programming
