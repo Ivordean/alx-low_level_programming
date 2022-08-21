@@ -1,13 +1,21 @@
 #include "main.h"
 /**
-* _memset -> function that copies memory area
-* @s: pointer that point to a memory area
-* @b: the constant byte to be inserted in the memory are pointed to by s
-* @n: first n bytes of the memory area to be filled
-* Return: return a pointer to the memory area- (s)
+*_memset - The _memset() function fills
+* the first n bytes of the memory area
+* pointed to by s with the constant byte b
+*@s:target
+*@b: constant byte
+*@n:number of byte
+*Return: returns new value of target
 */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-	memset(s, b, n);
+	while (n)
+	{
+		s[n - 1] = b;
+		n--;
+	}
 	return (s);
+
 }
