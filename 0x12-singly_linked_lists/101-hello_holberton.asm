@@ -1,15 +1,16 @@
-SECTION .data
-msg:	db "Hello, Holberton", 0
-fmt:	db "%s", 10, 0
+section .data
+        str: db "Hello, Holberton", 10,0
 
-	SECTION .text
-	extern printf
-	global main
+section .text
+        global main
+
 main:
-	mov esi, msg
-	mov edi, fmt
-	mov eax, 0
-	call printf
-
-	mov eax, 0
-	ret
+        mov rax, 1
+        mov rdi, 1
+        mov rsi, str
+        mov rdx, 17
+        syscall
+        ;return (0)
+        mov rax, 60
+        mov rdi, 0
+        syscall
